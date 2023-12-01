@@ -1,0 +1,17 @@
+{
+    "env": "production",
+    "ip": "127.0.0.1",
+    "port": 7000,
+    "host": "localhost",
+    "baseUrl": "http://localhost:7000",
+    "basePath": "/api/v0",
+    "db": {
+        "host": "127.0.0.1:27017",
+        "name": "central-notifications",
+        "auth": {
+            "user": "",
+            "password": ""
+        }
+    }
+
+}

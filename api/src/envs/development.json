@@ -1,0 +1,22 @@
+{
+    "env": "development",
+    "ip": "127.0.0.1",
+    "port": 7000,
+    "host": "localhost",
+    "baseUrl": "http://localhost:7000",
+    "basePath": "/api/v0",
+    "tokenTTL": 3600,
+    "tokenSalt": "5dG8@3!Dtder",
+    "db": {
+        "host": "127.0.0.1:27017",
+        "name": "central-notifications",
+        "auth": {
+            "user": "",
+            "password": ""
+        }
+    },
+    "amqp": {
+        "host": "amqp://localhost",
+        "secret": "fe@c/VW'4mK)6Gtd"
+    }
+}

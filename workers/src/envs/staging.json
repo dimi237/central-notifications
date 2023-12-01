@@ -1,0 +1,13 @@
+{
+    "env": "staging",
+    "basePath": "/api/v0",
+    "db": {
+        "host": "127.0.0.1:27017",
+        "name": "central-notifications",
+        "auth": {
+            "user": "",
+            "password": ""
+        }
+    },
+    "mailSender": "dimitrisigne@gmail.com"
+}

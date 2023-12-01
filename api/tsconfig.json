@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs", 
+    "moduleResolution": "node",                     
+    "baseUrl": "./src",                                 
+    "paths": {
+      "envs/*": ["envs/*"],
+      "common/*": ["common/*"],
+      "routes/*": ["routes/*"],
+      "modules/*": ["modules/*"],
+      "loaders/*": ["loaders/*"],
+      "database/*": ["database/*"],
+      "crons/*": ["crons/*"],
+      "queue/*": ["queue/*"],
+      "convict-config": ["convict-config"],
+      "winston-config": ["winston-config"]
+    },                                      
+    "typeRoots": [
+      "src/common/types",
+      "node_modules/@types"
+    ],                                  
+    "sourceMap": true,                             
+    "outDir": "./dist",                             
+    "esModuleInterop": true, 
+    "forceConsistentCasingInFileNames": true, 
+    "strict": true, 
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src/**/*",
+    "decs.d.ts",
+    "scripts/**/*",
+    "convict-config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "env": "production",
+    "ip": "127.0.0.1",
+    "host": "localhost",
+    "db": {
+        "host": "127.0.0.1:27017",
+        "name": "central-notifications",
+        "auth": {
+            "user": "",
+            "password": ""
+        }
+    }
+
+}
