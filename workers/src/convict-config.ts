@@ -82,13 +82,34 @@ export const config = convict({
         doc: 'email sender.',
         format: '*',
         default: 'smtp',
-        env: 'MAIL_Sender'
+        env: 'MAIL_SENDER'
+    },
+    smsSender: {
+        doc: 'sms sender.',
+        format: '*',
+        default: 'smtp',
+        env: 'SMS_SENDER'
     },
     smsProvider: {
         doc: 'sms provider.',
         format: '*',
         default: 'smtp',
         env: 'SMS_PROVIDER'
+    },
+    twilio: {
+        accountId: {
+            doc: 'SMS canal.',
+            format: String,
+            default: '',
+            env: 'TWILIO_ACCOUNT_ID',
+        },
+        token: {
+            doc: 'SMS token.',
+            format: String,
+            default: '',
+            env: 'TWILIO_TOKEN',
+        },
+
     },
     smtp: {
         host: {

@@ -1,10 +1,13 @@
 import { BulkNotifications, Sms } from "common/models";
 import { Service } from "typedi";
 import { logger } from "winston-config";
+import { TwilioSender } from "./senders/twilio";
+import { SmsOptions } from "./senders/models";
+import config from "convict-config";
 
 @Service()
 export class SmsService {
-    constructor() { }
+    constructor(private readonly twilioSender: TwilioSender) { }
 
     async sendBulkSms(data: BulkNotifications) {
         try {
@@ -15,8 +18,12 @@ export class SmsService {
 
     async sendSms(data: Sms) {
         try {
-            logger.debug(JSON.stringify(data))
-
+            const smsOptions: SmsOptions = {
+                body: data.message,
+                from: config.get('smsSender'),
+                to: data.tel
+            }
+            await this.twilioSender.sendSMS(smsOptions);
         }
         catch (error) { throw (error); }
     }

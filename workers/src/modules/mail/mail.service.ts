@@ -12,7 +12,7 @@ export class EmailService {
 
     async sendBulkEmail(data: BulkNotifications) {
         try {
-            logger.debug('ici')
+            logger.debug(JSON.stringify(data))
         }
         catch (error) { throw (error); }
     }
